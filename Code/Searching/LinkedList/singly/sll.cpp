@@ -40,9 +40,43 @@ void display(Node* head)
     }
     cout<<"NULL"<<endl;
 }
-void Delete(Node* &head)
+void Delete(Node* &head , int key)
 {
+    if(head == NULL)
+    {
+        return;
+    }
+    if(head -> next == NULL)
+    {
+        Node* todelete = head;
+        head = head -> next;
+        delete todelete;
+        return;
+    }
+    Node* temp = head;
+    while(temp -> next -> data != key)
+    {
+        temp = temp -> next;
+    }
+    Node* todelete = temp -> next;
+    temp -> next = temp -> next -> next;
+    delete todelete;
+}
 
+void reverse(Node* &head)
+{
+    Node* prevptr = NULL;
+    Node* currptr = head;
+    Node* nextptr;
+
+    while(currptr != NULL){
+        nextptr = currptr -> next;
+        currptr -> next = prevptr;
+
+        prevptr = currptr;
+        currptr = nextptr;
+    }
+    head = prevptr;
 }
 
 
@@ -53,6 +87,9 @@ int main(){
     insert(head, 5);
     insert(head, 6);
     insert(head, 7);
+    Delete(head,5);
+    reverse(head);
     display(head);
+
     return 0;
 }
