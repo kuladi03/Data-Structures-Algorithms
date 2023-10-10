@@ -3,7 +3,7 @@ using namespace std;
 
 class Stack{
     public:
-
+    
     int *arr;
     int top;
     int size;
@@ -54,13 +54,10 @@ class Stack{
             return true;
         }
     }
-
-
 };
 
 
 int main(){
-
     Stack st(5);
     st.push(2);
     // cout<<st.Top();
