@@ -19,7 +19,6 @@ class Node{
 int main(){
 
     Node* root = NULL;
-    buildtree(root);
     
     return 0;
 }
