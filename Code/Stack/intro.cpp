@@ -8,6 +8,7 @@ class Stack{
     int top;
     int size;
     
+    //stack initialization
     Stack(int size){
         top = -1;
         this -> size = size;
@@ -54,10 +55,13 @@ class Stack{
             return true;
         }
     }
+
+
 };
 
 
 int main(){
+
     Stack st(5);
     st.push(2);
     // cout<<st.Top();
