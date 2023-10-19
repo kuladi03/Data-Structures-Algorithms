@@ -15,21 +15,6 @@ class Node{
     }
 
 };
-Node* buildtree(Node* root){
-        int data;
-        cout<<"Enter the data : "<<endl;
-        cin>>data;
-
-        if(data == -1){
-            return root;
-        }
-        cout<<"Enter the data of left "<<data<<endl;
-        root->left = buildtree(root->left);
-        cout<<"Enter the data of right "<<data<<endl;
-        root->right = buildtree(root->right);
-
-        return root;
-    }
 
 int main(){
 
