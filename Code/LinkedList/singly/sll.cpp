@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-class Node{
+struct Node{
     public:
 
     int data;
@@ -88,7 +88,7 @@ int main(){
     insert(head, 6);
     insert(head, 7);
     Delete(head,5);
-    reverse(head);
+    // reverse(head);
     display(head);
 
     return 0;

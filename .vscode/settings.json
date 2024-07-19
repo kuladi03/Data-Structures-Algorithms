@@ -8,6 +8,10 @@
         "vector": "cpp",
         "string_view": "cpp",
         "span": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp"
     }
 }
