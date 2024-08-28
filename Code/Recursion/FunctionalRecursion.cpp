@@ -5,19 +5,15 @@ void reverse(int arr[] , int start , int end){
     if(start > end){
         return ;
     }
-    int temp = arr[end];
-    arr[end] = arr[start];
-    arr[start] = temp;
+    swap(arr[start] , arr[end]);
     reverse(arr , start+1 , end-1);
 }
 
 int main(){
-    int arr[10] = {1,2,3,7,8,9,4,5,6,0};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    reverse(arr , 0 , n-1);
-    for(int i = 0 ; i < n ; i++){
-        cout<<arr[i]<<" ";
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    reverse(arr , 0 , 9);
+    for(auto i : arr){
+        cout<<i<<" ";
     }
-    cout<<endl;
     return 0;
 }
